@@ -1,0 +1,6 @@
+name: elsa
+channels:
+  - intel
+  - defaults
+prefix: /home/patechoc/anaconda3/envs/elsa
+
