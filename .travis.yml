@@ -1,0 +1,15 @@
+language: python
+python:
+- 3.6
+script:
+- python app.py freeze
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: python app.py deploy --no-freeze --push
+  on:
+    branch: master
+    repo: patechoc/test_Elsa_0001
+env:
+  global:
+    secure: PNtoSbVSLGqVm3M2rxDY5kgSRBO+Q2+Rmja0+ekcJpvwsUQyqAzRZwoXbe+Pq0FBObzTCF8hOeqQCD/D3sDgHd5dOilQyOKM/nk5Srfa23Pmu36m70+IzW6rX20S66vjHtEfXw6XOGNUixQD2eEcuo2AKJjJQQEMgD18fdq2Vhn739MRUUUsqlWEtKv8BFdEc86AzI5uL5QV1e5MCgr2m75b5HC4S3RQFycxD78So+ocODUULn0otCznI/xeAl19dmKo1ZW7NdvC8fzECx4O0pBlf1RsbcF2XjfXE1BGZ7qiw7yQtqjL6BfLNiWjZDBgECcIIgQWKBkdSn4FjpgAq8AjQPWdIr5caUg+AmTTwiEKpEx541R0Ty8QXbldXxJhumpqkv9kkDHRI3yW2BE6Zg3KvkHKikc8ZpVqf36K4AOwaOOGcDxyhTJILTy6ir/x6TSFw+r26ID7Ko8CosXyjjJTmu/rFbAnu+0eugajGpvcRY4xlkDUeVGE8LV5sgR5AtkagKg3X3bUCysk/Xva8KXvFVDnSZdzgb2J6nUYz7bfkkP5f1e6PZBro/IEzGwtDEeUAKCCnHep/PmgH2PuMqFiy08BtHpSjTanxyfXib6ta0+dxo2QRkJgjtYbbaOtv2H2aezQbfF1qjLvmROsOBWRmDR53XoQro8pBHpASQc=

@@ -1,3 +1,7 @@
+# Frozen Flask webapp with Elsa
+
+https://github.com/pyvec/elsa/blob/master/QUICKSTART.rst
+
 ## conda create --name elsa python=3.6
 conda env create -f environment.yml
 
